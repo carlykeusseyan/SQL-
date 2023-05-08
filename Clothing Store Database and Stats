@@ -1,0 +1,54 @@
+--Create clothing store database--
+
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, garment TEXT, price INTEGER, brand TEXT, aisle TEXT);
+
+INSERT INTO inventory VALUES
+(1, "Shirt", 100, "Gucci", 1),
+(2, "Jeans", 150, "Levi's", 2),
+(4, "Purse", 120, "Coach", 3),
+(5, "Wallet", 80, "Kate Spade", 3),
+(6, "Skirt", 175, "Michael Kors", 2),
+(7, "Jeans", 100, "Levi's", 2),
+(8, "Shirt", 50, "Tommy Hilfiger", 1),
+(9, "Purse", 75, "Coach", 3),
+(10, "Skirt", 95, "Michael Kors", 2),
+(11, "Wallet", 40, "Kate Spade", 3),
+(12, "Shoes", 600, "Loubuitton", 5),
+(13, "Dress", 80, "Chanel", 4),
+(14, "Belt", 250, "Hermes", 3),
+(15, "Shirt", 60, "Calvin Klein", 1);
+
+--Display database ordered by price
+SELECT * FROM Inventory ORDER BY price;
+
+--Display total selling price per brand 
+SELECT brand, SUM(price)"Total sell price"  FROM inventory GROUP BY brand;
+
+--Display number of items in each aisle
+SELECT aisle, COUNT(garment) "Number of pieces"
+FROM inventory
+Group by aisle;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
